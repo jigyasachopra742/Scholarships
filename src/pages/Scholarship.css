@@ -1,0 +1,39 @@
+.containerr {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-content: center;
+  margin-top: 2rem;
+  padding: 10px;
+}
+
+h1 {
+  font-size: 20px;
+  text-align: center;
+}
+
+/* Media Query for tablets and larger screens */
+@media (min-width: 768px) {
+  .containerr {
+    grid-gap: 3rem;
+    margin-top: 3rem;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+}
+
+/* Media Query for larger screens */
+@media (min-width: 1024px) {
+  .containerr {
+    grid-gap: 4rem;
+    margin-top: 4rem;
+    padding: 30px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}

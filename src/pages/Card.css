@@ -1,0 +1,15 @@
+.card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    width: 15rem;
+    text-align: left;
+    cursor: pointer;
+  }
+  
+  h1 {
+    font-size: 24px;
+  }
+  
