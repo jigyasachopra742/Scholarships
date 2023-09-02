@@ -3,6 +3,8 @@ import BannerImage from "../assests/boy-photo.png"
 import "./Home.css"
 import Card from './Card';
 import { Link } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const cardData = [
   { id: 1, title: 'Card 1', category: 'government'},
@@ -15,6 +17,12 @@ const cardData = [
   { id: 8, title: 'Card 8', category: 'category8' },
 ];
 
+const notify = () => toast("User Registration Successfull");
+
+const handleClick = () => {
+  fetch('', { method: 'POST', headers: { accept: 'application/json', body: JSON.stringify({ message: 'Hello World!' }) } })
+  notify();
+}
 
 const Home = () => {
   return (
@@ -23,7 +31,6 @@ const Home = () => {
       
     {/* HEADER PART */}
     <div className='content'>
-        
         <div className='textBox'>
             <h2>It's not just a Scholarship website It's free scholarship</h2>
               <p>Lorem ipsum dolor sit amet. Qui temporibus autem vel dolorum Quis 
@@ -35,12 +42,15 @@ const Home = () => {
                 et rerum corrupti.
               </p>
         </div>
-
+       
         <div className='imgBox'>
             <img src={BannerImage} alt='photo' className='boy' />
         </div>
-    
     </div>
+    
+    {/* Registration button */}
+    <button class="btn btn-1 btn-1c" onClick={handleClick}>Registration</button>
+    <ToastContainer />
 
       {/* CATEGORY OF SCHOLARSHIP */}
     <section className='category'>

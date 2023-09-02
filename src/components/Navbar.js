@@ -45,6 +45,17 @@ const Navbar = () => {
                             Home
                         </Link>
                     </li>
+
+                    <li className='nav-item'>
+                        <Link 
+                            to="/all_scholarships"
+                            activeClassName="active" 
+                            className='nav-links' 
+                            onClick={handleClick}
+                        >
+                            All Scholarships
+                        </Link>
+                    </li>
                 
                 </ul>
 

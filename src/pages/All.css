@@ -1,0 +1,55 @@
+.containerrr{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+}
+
+.cardddd{
+   background: lightblue;
+   width: 220px;
+  
+   margin: 50px;
+   border: 1px solid rgb(18, 16, 19);
+   border-radius: 15px;
+}
+
+.cardddd-image{
+    background-color: aqua;
+    height: 170px;
+    margin-bottom: 15px;
+    background-size: cover;
+    border-radius: 15px 15px 0 0;
+
+}
+
+.icon-1 {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFDCypA0utnr2PRXCqDtGjx07inw3htMFN-A&usqp=CAU ');
+}
+
+.cardddd p{
+    padding: 10px;
+}
+
+.cardddd h2{
+    padding: 10px;
+}
+
+.cardddd a{
+    background-color: rgb(172, 117, 49);
+    color: white;
+    padding: 15px 20px;
+    display: block;
+    text-align: center;
+    margin: 20px 50px;
+    text-decoration: none;
+}
+
+.cardddd:hover{
+    background-color: rgb(16, 16, 33);
+    color: white;
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: all 1s ease;
+    
+}
