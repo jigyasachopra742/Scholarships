@@ -1,55 +1,61 @@
-.containerrr{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    justify-content:flex-start;
+.scholar_section{
+    width: 100%;
+    justify-content: space-around;  
 }
-
-.cardddd{
-   background: lightblue;
-   width: 220px;
-  
-   margin: 50px;
-   border: 1px solid rgb(18, 16, 19);
-   border-radius: 15px;
-}
-
-.cardddd-image{
-    background-color: aqua;
-    height: 170px;
-    margin-bottom: 15px;
-    background-size: cover;
-    border-radius: 15px 15px 0 0;
-
-}
-
-.icon-1 {
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFDCypA0utnr2PRXCqDtGjx07inw3htMFN-A&usqp=CAU ');
-}
-
-.cardddd p{
-    padding: 10px;
-}
-
-.cardddd h2{
-    padding: 10px;
-}
-
-.cardddd a{
-    background-color: rgb(172, 117, 49);
-    color: white;
-    padding: 15px 20px;
-    display: block;
+.scholar_section h1{
     text-align: center;
-    margin: 20px 50px;
-    text-decoration: none;
+    padding: 25px 0px;
+}
+.containerrr{
+    width: 1280px;
+    margin: auto;
+    flex-wrap: wrap;
+    display: flex;
+}
+  
+.scholar-items{
+    flex-basis: 23%; 
+    margin: 1%;
+    text-align: center;
+    padding: 20px 0px;
+    background: white;
+    box-shadow: 0px 0px 10px 3px lightgrey;
 }
 
-.cardddd:hover{
-    background-color: rgb(16, 16, 33);
+.scholar-items h3{
+    padding: 10px 0px;
+}
+
+.scholar-items p{
+    padding: 10px;
+}
+
+.scholar-items button{
+    background: rgb(98, 98, 183);
+    padding: 10px 25px;
+    border: none;
     color: white;
+    margin: 10px 0px;
+    border-radius: 10px;
+}
+
+.scholar-items:hover{
+    background-color: rgb(155, 155, 193);
+}
+
+.scholar-items:hover button{
+    background: white;
+    color: blue;
     cursor: pointer;
-    transform: scale(1.03);
-    transition: all 1s ease;
-    
+}
+
+@media only screen and (min-width: 200px) and (max-width: 767px){
+    .containerrr{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .scholar-items{
+        margin: 10px;
+    }
 }

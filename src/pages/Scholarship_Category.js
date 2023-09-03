@@ -34,18 +34,20 @@ const Scholarship_Category = ({ category }) => {
   
   return (
     <>
-    <h1>{category} scholarships</h1>
-     <div className='containerr'>
-        {scholarships.map(scholar => (
-          <Scholarship_Card            
-            key={scholar.id}
-            title={scholar.title}
-            des={scholar.des}
-            category={scholar.category}
-            url={scholar.url}
-          />
-        ))}
-      </div>
+    <div className='category-section'>
+      <h1>{category} scholarships</h1>
+        <div className='category-containerr'>
+            {scholarships.map(scholar => (
+              <Scholarship_Card            
+                key={scholar.id}
+                title={scholar.title}
+                des={scholar.des}
+                category={scholar.category}
+                url={scholar.url}
+              />
+            ))}
+        </div>
+    </div>
     </>
   );
 };

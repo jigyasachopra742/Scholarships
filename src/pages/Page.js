@@ -19,6 +19,7 @@ const Page = () => {
               <Route path='government' element = {<Scholarship_Category category="government" />}></Route>
               <Route path='private' element = {<Scholarship_Category category="private" />}></Route>
               <Route path='international' element = {<Scholarship_Category category="international"/>}></Route>
+              <Route path='university' element = {<Scholarship_Category category="university"/>}></Route>
           </Routes>
       </div>
     </>

@@ -10,7 +10,7 @@ const cardData = [
   { id: 1, title: 'Card 1', category: 'government'},
   { id: 2, title: 'Card 2', category: 'private' },
   { id: 3, title: 'Card 3', category: 'international' },
-  { id: 4, title: 'Card 4', category: 'category4' },
+  { id: 4, title: 'Card 4', category: 'university' },
   { id: 5, title: 'Card 5', category: 'category5' },
   { id: 6, title: 'Card 6', category: 'category6' },
   { id: 7, title: 'Card 7', category: 'category7' },

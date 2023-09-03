@@ -119,6 +119,8 @@ h1 {
 }
 
 
-
-
-
+@media only screen and (min-width: 200px) and (max-width: 767px){
+  .card-container {
+      flex-direction: column;
+  }
+}
