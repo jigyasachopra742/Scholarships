@@ -17,12 +17,27 @@ const cardData = [
   { id: 8, title: 'Card 8', category: 'category8' },
 ];
 
-const notify = () => toast("User Registration Successfull");
-
 const handleClick = () => {
-  fetch('', { method: 'POST', headers: { accept: 'application/json', body: JSON.stringify({ message: 'Hello World!' }) } })
-  notify();
-}
+
+fetch('http://localhost:9090/user/added', {
+  method: 'POST',
+  body: JSON.stringify({
+               name: "",
+               email: ""
+  }),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+})
+   .then((response) => response.json())
+   .then((data) => {
+      console.log(data);
+      // Handle data
+   })
+   .catch((err) => {
+      console.log(err.message);
+   })
+  }
 
 const Home = () => {
   return (

@@ -5,8 +5,8 @@ const All = (props) => {
   return (
         <div className='scholar-items'>
             <h3>{props.title}</h3>
-            <p>{props.description}</p>
-            <button>{props.btn}</button>
+            <p>{props.des}</p>
+            <button><a href={props.url}>ReadMore</a></button>
         </div>
     )
 }
