@@ -27,7 +27,7 @@ const handleClick = () => {
 const Home = () => {
   return (
     <>
-    <div className='circle'></div>
+   
       
     {/* HEADER PART */}
     <div className='content'>

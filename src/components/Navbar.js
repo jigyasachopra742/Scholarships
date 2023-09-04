@@ -3,67 +3,57 @@ import { Link } from "react-router-dom";
 import "./Navbar.css"
 
 const Navbar = () => {
-    
-    const[click, setClick] = useState(false);
-    const handleClick = () => setClick(!click);
-
+    const [menuOpen, setMenuOpen] = useState(false);
+    const handleClick = () => {
+        setMenuOpen(!menuOpen);
+    }
     return (
     <>
-        <nav className='navbar'>
-            <div className='nav-container'>
-                <Link to="/" className='nav-logo'>Scholarships</Link>
-                <ul className={click ? "nav-menu active" : "nav-menu"}>
-                    <li className='nav-item'>
+        <nav>
+            <Link to="/" className='nav-title'>Scholarships</Link>
+            <div className="menu" onClick={() => setMenuOpen(!menuOpen)}>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+                <ul className={menuOpen ? "open active" : ""}>
+                    <li>
                         <Link 
-                            to="/contact" 
-                            activeClassName="active" 
-                            className='nav-links' 
-                            onClick={handleClick}
+                            to="/contact"
+                            onClick={handleClick} 
                         >
-                            CONTACT
+                            Contact
                         </Link>
                     </li>
 
                     <li className='nav-item'>
                         <Link 
                             to="/about"
-                            activeClassName="active" 
-                            className='nav-links' 
-                            onClick={handleClick}
+                            onClick={handleClick} 
                         >
                             About
                         </Link>
                     </li>
 
-                    <li className='nav-item'>
+                    <li>
                         <Link 
                             to="/"
-                            activeClassName="active" 
-                            className='nav-links' 
-                            onClick={handleClick}
+                            onClick={handleClick} 
                         >
                             Home
                         </Link>
                     </li>
 
-                    <li className='nav-item'>
+                    <li>
                         <Link 
                             to="/all_scholarships"
-                            activeClassName="active" 
-                            className='nav-links' 
-                            onClick={handleClick}
+                            onClick={handleClick} 
                         >
                             All Scholarships
                         </Link>
                     </li>
                 
                 </ul>
-
-                <div className='nav-icon' onClick={handleClick}>
-                    <i className={click ? 'fas fa-times' : "fa-regular fa-bars"}></i>
-                </div>
-            
-            </div>
         </nav>
     </>
   )
