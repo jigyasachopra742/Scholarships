@@ -1,35 +1,37 @@
-import React from 'react';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css'
+import React, { useState } from 'react';
+// import { ToastContainer, toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css'
 import './Form.css';
 
-const notify = () => toast("Wow so easy!");
-
-const handleSubmit = () => {
- 
-  fetch('http://localhost:9090/user/added', {
-  method: 'POST',
-  body: JSON.stringify({
-               name: "",
-               email: ""
-  }),
-  headers: {
-    'Content-type': 'application/json; charset=UTF-8',
-  },
-})
-   .then((response) => response.json())
-   .then((data) => {
-      console.log(data);
-      // Handle data
-   })
-   .catch((err) => {
-      console.log(err.message);
-   })
-
-  notify();
-}
-
 const Form = () => {
+  const [formData,  setFormData] = useState({name:'', email:''});
+  
+  const handleChange = (e) =>{
+    const {name, value} = e.target;
+    setFormData({...formData,[name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    fetch('http://localhost:9090/user/added', {
+      method: 'POST',
+      body: JSON.stringify(formData),
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+          console.log(data);
+          // Handle data
+      })
+      .catch((err) => {
+          console.log(err.message);
+      })
+
+  }
+
   return (
     <>
       <main>
@@ -38,23 +40,25 @@ const Form = () => {
         </div>
         <div className='contentBx'>
           <div className='formBx'>
+              
               <h2>Registration Form</h2>
-              <form>
+              <form onSubmit={handleSubmit}>
                 <div className='inputBx'>
                   <span>Name of the user</span>
-                  <input type='text' name=''></input>
+                  <input type='text' name='name' value = {formData.name} onChange = {handleChange} placeholder='Name'></input>
                 </div>
                 
                 <div className='inputBx'>
                   <span>Email ID of user</span>
-                  <input type='text' name=''></input>
+                  <input type='email' name='email'  value = {formData.email} onChange = {handleChange} placeholder='Email'></input>
                 </div>
                 
                 <div className='inputBx'>
-                  <button type='submit' onClick={handleSubmit}>Submit</button>
-                  <ToastContainer />
+                  <button type='submit'>Submit</button>
                 </div>
+              
               </form>
+          
           </div>
         </div>
       </main>
