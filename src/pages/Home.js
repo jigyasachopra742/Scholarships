@@ -46,7 +46,7 @@ const Home = () => {
     </div>
     
     {/* Registration button */}
-    <button class="btn btn-1 btn-1c" onClick={HandleClick}>Registration</button>
+    <button className="btn btn-1 btn-1c" onClick={HandleClick}>Registration</button>
 
       {/* CATEGORY OF SCHOLARSHIP */}
     <section className='category'>
