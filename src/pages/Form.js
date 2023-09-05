@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-// import { ToastContainer, toast } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
 import './Form.css';
 
 const Form = () => {
+  const notify=()=>toast("Registered Successfully !")
   const [formData,  setFormData] = useState({name:'', email:''});
   
   const handleChange = (e) =>{
@@ -13,7 +14,7 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    notify();
     fetch('http://localhost:9090/user/added', {
       method: 'POST',
       body: JSON.stringify(formData),
@@ -29,7 +30,7 @@ const Form = () => {
       .catch((err) => {
           console.log(err.message);
       })
-
+      
   }
 
   return (
