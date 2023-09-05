@@ -2,48 +2,30 @@ import React from 'react'
 import BannerImage from "../assests/boy-photo.png"
 import "./Home.css"
 import Card from './Card';
-import { Link } from 'react-router-dom';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { Link} from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 const cardData = [
   { id: 1, title: 'Card 1', category: 'government'},
   { id: 2, title: 'Card 2', category: 'private' },
   { id: 3, title: 'Card 3', category: 'international' },
   { id: 4, title: 'Card 4', category: 'university' },
-  { id: 5, title: 'Card 5', category: 'category5' },
-  { id: 6, title: 'Card 6', category: 'category6' },
+  { id: 5, title: 'Card 5', category: 'girls' },
+  { id: 6, title: 'Card 6', category: 'engineering' },
   { id: 7, title: 'Card 7', category: 'category7' },
   { id: 8, title: 'Card 8', category: 'category8' },
 ];
 
-const handleClick = () => {
-
-fetch('http://localhost:9090/user/added', {
-  method: 'POST',
-  body: JSON.stringify({
-               name: "",
-               email: ""
-  }),
-  headers: {
-    'Content-type': 'application/json; charset=UTF-8',
-  },
-})
-   .then((response) => response.json())
-   .then((data) => {
-      console.log(data);
-      // Handle data
-   })
-   .catch((err) => {
-      console.log(err.message);
-   })
-  }
-
 const Home = () => {
+  
+  const navigate = useNavigate();
+  
+  const HandleClick = () => {
+    navigate("/form");    
+  };
+
   return (
     <>
-   
-      
     {/* HEADER PART */}
     <div className='content'>
         <div className='textBox'>
@@ -64,8 +46,7 @@ const Home = () => {
     </div>
     
     {/* Registration button */}
-    <button class="btn btn-1 btn-1c" onClick={handleClick}>Registration</button>
-    <ToastContainer />
+    <button class="btn btn-1 btn-1c" onClick={HandleClick}>Registration</button>
 
       {/* CATEGORY OF SCHOLARSHIP */}
     <section className='category'>
