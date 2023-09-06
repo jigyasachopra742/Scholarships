@@ -3,8 +3,8 @@
     flex-wrap: wrap;
     text-align: center;
     justify-content: center;
-    margin-top: 1rem;
-}
+    margin-top: 1rem; 
+ }
 
 .pagination button {
     width: 40px;
@@ -13,14 +13,14 @@
     font-weight: 600;
     font-size: 16px;
     text-align: center;
-    justify-content: center;
+    /* justify-content: center;*/
     margin: 0 10px;
     border-radius: 6px;
-    cursor: pointer;
+     cursor: pointer; 
     transition: all 0.3s ease;
     background: transparent;
     color: black;
-    border-color: black;
+    border-color: black; 
 }
 
 .pagination button.active {
