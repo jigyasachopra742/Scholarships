@@ -1,5 +1,5 @@
 import React from 'react'
-import BannerImage from "../assests/boy-photo.png"
+import BannerImage from "../assests/girl-image.png"
 import "./Home.css"
 import Card from './Card';
 import { Link} from 'react-router-dom';
@@ -12,8 +12,8 @@ const cardData = [
   { id: 4, title: 'Card 4', category: 'university' },
   { id: 5, title: 'Card 5', category: 'girls' },
   { id: 6, title: 'Card 6', category: 'engineering' },
-  { id: 7, title: 'Card 7', category: 'category7' },
-  { id: 8, title: 'Card 8', category: 'category8' },
+  { id: 7, title: 'Card 7', category: 'aid' },
+  { id: 8, title: 'Card 8', category: 'research' },
 ];
 
 const Home = () => {
@@ -28,21 +28,28 @@ const Home = () => {
     <>
     {/* HEADER PART */}
     <div className='content'>
+        
         <div className='textBox'>
-            <h2>It's not just a Scholarship website It's free scholarship</h2>
-              <p>Lorem ipsum dolor sit amet. Qui temporibus autem vel dolorum Quis 
-                ea molestiae molestiae est autem amet sit numquam cumque quo corrupti 
-                deserunt qui doloremque error. Nam architecto rerum ut adipisci laborum 
-                At voluptatibus consequatur cum culpa suscipit et explicabo tempore. 
-                Et dolores repudiandae eum fuga ipsum est similique nihil qui 
-                reprehenderit illo ut veritatis veritatis vel fugiat inventore 
-                et rerum corrupti.
+            <h2>Unlocking Opportunities Empowering <br></br><span>Futures!</span></h2>
+              <p>
+                Welcome to our scholarship website, your one-stop destination for 
+                scholarships categorized to suit your needs. We understand that 
+                every student's journey is unique, and so are their financial 
+                requirements. <br></br><br></br>That's why we offer an extensive selection of 
+                scholarships, organized by categories such as academic excellence
+                , STEM, arts, sports, and more. Whether you're a high school senior
+                , undergraduate, or graduate student, we have opportunities tailored
+                 to your ambitions. Our platform simplifies the search process, 
+                 ensuring you find the perfect scholarship to support your educational 
+                 dreams. Don't let finances hold you back; explore our diverse 
+                 range of scholarships today and invest in your future!
               </p>
         </div>
        
         <div className='imgBox'>
             <img src={BannerImage} alt='photo' className='boy' />
         </div>
+    
     </div>
     
     {/* Registration button */}

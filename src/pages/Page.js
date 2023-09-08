@@ -24,6 +24,8 @@ const Page = () => {
               <Route path='university' element = {<Scholarship_Category category="university"/>}></Route>
               <Route path='girls' element = {<Scholarship_Category category="girls"/>}></Route>
               <Route path='engineering' element = {<Scholarship_Category category="engineering"/>}></Route>
+              <Route path='aid' element = {<Scholarship_Category category="aid"/>}></Route>
+              <Route path='research' element = {<Scholarship_Category category="research"/>}></Route>
           </Routes>
       </div>
     </>
