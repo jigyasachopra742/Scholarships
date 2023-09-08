@@ -4,7 +4,7 @@ import "./Home.css"
 import Card from './Card';
 import { Link} from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
-
+import img from'../assests/boy-photo.png' 
 const cardData = [
   { id: 1, title: 'Card 1', category: 'government'},
   { id: 2, title: 'Card 2', category: 'private' },
@@ -17,8 +17,8 @@ const cardData = [
 ];
 
 const Home = () => {
-  
-  const navigate = useNavigate();
+  // const img1=img;
+    const navigate = useNavigate();
   
   const HandleClick = () => {
     navigate("/form");    
@@ -65,7 +65,7 @@ const Home = () => {
       {cardData.map(card => {
         return(
           <Link to={`/${card.category}`}>
-            <Card title={card.title} content={card.content} category={card.category}/>
+            <Card title={card.title} content={card.content} category={card.category} id={card.id}/>
           </Link>
         )
         })}
