@@ -6,14 +6,14 @@ import { Link} from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import img from'../assests/boy-photo.png' 
 const cardData = [
-  { id: 1, title: 'Card 1', category: 'government'},
-  { id: 2, title: 'Card 2', category: 'private' },
-  { id: 3, title: 'Card 3', category: 'international' },
-  { id: 4, title: 'Card 4', category: 'university' },
-  { id: 5, title: 'Card 5', category: 'girls' },
-  { id: 6, title: 'Card 6', category: 'engineering' },
-  { id: 7, title: 'Card 7', category: 'aid' },
-  { id: 8, title: 'Card 8', category: 'research' },
+  { id: 1, title: 'Government scholarships', category: 'government'},
+  { id: 2, title: 'Private Scholarships', category: 'private' },
+  { id: 3, title: 'International Scholarships', category: 'international' },
+  { id: 4, title: 'University Scholarships', category: 'university' },
+  { id: 5, title: 'Girls Scholarships', category: 'girls' },
+  { id: 6, title: 'Engineering Scholarships', category: 'engineering' },
+  { id: 7, title: 'Aid Scholarships', category: 'aid' },
+  { id: 8, title: 'Research Scholarships', category: 'research' },
 ];
 
 const Home = () => {
