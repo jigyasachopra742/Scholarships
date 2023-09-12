@@ -4,7 +4,8 @@ import 'react-toastify/dist/ReactToastify.css'
 import './Form.css';
 
 const Form = () => {
-  const notify=()=>toast("Registered Successfully !")
+  const notify = () => toast("Registered Successfully !")
+  
   const [formData,  setFormData] = useState({name:'', email:''});
   
   const handleChange = (e) =>{
@@ -14,7 +15,9 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
     notify();
+    
     fetch('http://localhost:9090/user/added', {
       method: 'POST',
       body: JSON.stringify(formData),
@@ -41,7 +44,6 @@ const Form = () => {
         </div>
         <div className='contentBx'>
           <div className='formBx'>
-              
               <h2>Registration Form</h2>
               <form onSubmit={handleSubmit}>
                 <div className='inputBx'>
@@ -57,9 +59,8 @@ const Form = () => {
                 <div className='inputBx'>
                   <button type='submit'>Submit</button>
                 </div>
-              
+                <ToastContainer />
               </form>
-          
           </div>
         </div>
       </main>
