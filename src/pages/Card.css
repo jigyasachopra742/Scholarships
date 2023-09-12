@@ -1,11 +1,13 @@
 .card{
-  flex-basis: 23%; 
+  flex-basis: 23%;
+  height: 20vh;
   margin: 1%;
   text-align: center;
   padding: 20px 0px;
   background: white;
   box-shadow: 0px 0px 10px 3px lightgrey;
-  /* background-image: url('../assests/boy-photo.png'); */
+  background-size: cover; /* This property scales the background image to cover the entire card */
+  background-repeat: no-repeat;
 }
 
 .card:hover{

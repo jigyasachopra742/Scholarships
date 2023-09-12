@@ -50,7 +50,7 @@ const Allscholarships = () => {
           {
             allData.map(card_dataa => {
               return(
-                <All title = {card_dataa.title}  des = {card_dataa.des}/>
+                <All title = {card_dataa.title}  des = {card_dataa.des} url = {card_dataa.url}/>
               )})
           }
           </div>
