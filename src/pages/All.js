@@ -6,7 +6,7 @@ const All = (props) => {
         <div className='scholar-items'>
             <h3>{props.title}</h3>
             <p>{props.des}</p>
-            <button><a href={props.url}>ReadMore</a></button>
+            <button><a href={props.url}>Read More</a></button>
         </div>
     )
 }

@@ -6,7 +6,18 @@
   background: white;
   box-shadow: 0px 0px 10px 3px lightgrey;
 }
+.category-cardd p{
+  padding: 10px;
+}
 
+.category-cardd button{
+  background: rgb(98, 98, 183);
+    padding: 10px 25px;
+    border: none;
+    color: white;
+    margin: 10px 0px;
+    border-radius: 10px;
+}
 .category-cardd:hover{
   background-color: rgb(219, 219, 223);
 }

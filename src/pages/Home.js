@@ -54,6 +54,7 @@ const Home = () => {
     
     {/* Registration button */}
     <button className="btn btn-1 btn-1c" onClick={HandleClick}>Registration</button>
+    
 
       {/* CATEGORY OF SCHOLARSHIP */}
     <section className='category'>
@@ -70,6 +71,8 @@ const Home = () => {
         )
         })}
     </div>
+
+
   </>
   )
 }
