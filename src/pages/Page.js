@@ -7,6 +7,7 @@ import Scholarship_Category from './Scholarship_Category';
 import './Page.css'
 import Allscholarships from './Allscholarships';
 import Form from './Form';
+import ContactUs from './ContactUs';
 
 const Page = () => {
   return (
@@ -15,7 +16,8 @@ const Page = () => {
           <Routes>
               <Route path='/' element= {<Home />}></Route>
               <Route path='about' element= {<About />}></Route>
-              <Route path='contact' element= {<Contact />}></Route>
+              <Route path='contactus' element = {<ContactUs />}></Route>
+              {/* <Route path='contact' element= {<Contact />}></Route> */}
               <Route path='all_scholarships' element= {<Allscholarships />}></Route>
               <Route path='form' element = {<Form />}></Route>
               <Route path='government' element = {<Scholarship_Category category="government" />}></Route>

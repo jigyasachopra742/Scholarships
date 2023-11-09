@@ -17,14 +17,14 @@ const Navbar = () => {
                 <span></span>
             </div>
                 <ul className={menuOpen ? "open active" : ""}>
-                    <li>
+                    {/* <li>
                         <Link 
                             to="/contact"
                             onClick={handleClick} 
                         >
                             Contact
                         </Link>
-                    </li>
+                    </li> */}
 
                     <li className='nav-item'>
                         <Link 
@@ -34,6 +34,16 @@ const Navbar = () => {
                             About
                         </Link>
                     </li>
+
+                    <li className='nav-item'>
+                        <Link 
+                            to="/contactus"
+                            onClick={handleClick} 
+                        >
+                            Contact Us
+                        </Link>
+                    </li>
+
 
                     <li>
                         <Link 

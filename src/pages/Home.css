@@ -159,7 +159,20 @@ h1 {
   }
 
   .content .imgBox img{
-    max-width: 300px;
+    max-width: 250px;
+    margin-left: 15%;
   }
 
+  /* only these changes in button and heading  */
+.btn-1c{
+    margin-left: 5%;
+  }
+
+  .category h1{
+    font-size: 35px !important;
+    padding: 0 0 0 0 ;
+    text-align: center !important;
+    justify-content: center !important;
+    align-items: center;
+  }
 }
