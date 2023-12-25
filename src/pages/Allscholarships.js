@@ -36,12 +36,6 @@ const Allscholarships = () => {
         console.log('Error fetching data : ', error)
       });
   }, [currentPage]);
-   
-  // const lastPostIndex = currentPage * postsPerPage;
-  // const firstPostIndex = lastPostIndex - postsPerPage;
-  // console.log("firstPostIndex", firstPostIndex, "lastPostIndex", lastPostIndex);
-  
-  // const currentPosts = dataa.slice(firstPostIndex, lastPostIndex); //change dataa to allData when fetching data through the API
 
   return (
     <div className='scholar_section'>

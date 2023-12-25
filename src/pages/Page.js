@@ -8,6 +8,7 @@ import './Page.css'
 import Allscholarships from './Allscholarships';
 import Form from './Form';
 import ContactUs from './ContactUs';
+import FeedBack from './FeedBack';
 
 const Page = () => {
   return (
@@ -28,6 +29,7 @@ const Page = () => {
               <Route path='engineering' element = {<Scholarship_Category category="engineering"/>}></Route>
               <Route path='aid' element = {<Scholarship_Category category="aid"/>}></Route>
               <Route path='research' element = {<Scholarship_Category category="research"/>}></Route>
+              <Route path='feedback' element = {<FeedBack/>}></Route>
           </Routes>
       </div>
     </>

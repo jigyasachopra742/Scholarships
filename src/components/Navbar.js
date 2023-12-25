@@ -43,7 +43,15 @@ const Navbar = () => {
                             Contact Us
                         </Link>
                     </li>
-
+                    <li className='nav-item'>
+                        <Link 
+                            to="/feedback"
+                            onClick={handleClick} 
+                            
+                        >
+                            FeedBack
+                        </Link>
+                    </li>
 
                     <li>
                         <Link 

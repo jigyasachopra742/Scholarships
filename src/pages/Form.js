@@ -54,8 +54,7 @@ const Form = () => {
                 <div className='inputBx'>
                   <span>Email ID of user</span>
                   <input type='email' name='email'  value = {formData.email} onChange = {handleChange} placeholder='Email'></input>
-                </div>
-                
+                </div>                
                 <div className='inputBx'>
                   <button type='submit'>Submit</button>
                 </div>

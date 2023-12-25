@@ -1,0 +1,60 @@
+.feedback_div{
+    background-image: linear-gradient(to bottom right, rgba(0, 150, 255, 0.32),rgba(255, 222, 106, 0.26));
+    height: 115vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: -18px;
+    align-items: center;
+}
+.contain{
+    width: 45%;
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Kanit:wght@100;300&family=Montserrat:wght@200&family=Poppins:wght@300&family=Work+Sans:ital,wght@1,300&display=swap');
+.feedback_head{
+    color: rgba(85, 85, 85, 1);
+    text-align: center;
+    font-size: 32px;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 20px;
+}
+.back_img{
+    height: 100%;
+    width: 50px;
+    align-items: center;
+    justify-content: flex-start;
+    background-repeat: no-repeat;
+    margin-right: 4px;
+    background-size: contain;
+}
+#img1{
+    background-image: url("../assests/emojis2.png");
+}
+#img2{
+    background-image: url("../assests/emojis3.png");
+}
+#img3{
+    background-image: url("../assests/emojis4.png");
+}
+#img4{
+    background-image: url("../assests/emojis5.png");
+}
+#img5{
+    background-image: url("../assests/emojis1.png");
+}
+@media screen and (max-width: 850px) {
+    .contain{
+        width: 80%;
+    }
+    .back_img{
+        width: 30px;
+    }
+}
+@media screen and (max-width: 1250px) {
+    .contain{
+        width: 80%;
+    }
+    .contain{
+        width: 60%;
+    }
+}
