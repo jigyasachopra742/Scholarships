@@ -25,7 +25,7 @@ const Allscholarships = () => {
   
 
   useEffect(() => {
-    const URL = `http://localhost:9090/scholarship/page?pageNumber=${currentPage}`;
+    const URL = `http://scholarship-env.eba-h5npp4q2.us-east-1.elasticbeanstalk.com/scholarship/page?pageNumber=${currentPage}`;
     fetch(URL)
       .then(response => response.json())
       .then(data => {

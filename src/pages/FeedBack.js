@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css'
 
 export default function FeedBack(){
 
-const notify = () => toast("Registered Successfully !")
+const notify = async () => toast("Feedback Registered Successfully !")
 let [exp,setExp] = useState(0);
 let [formData,setFormData] = useState({});
 
@@ -23,6 +23,7 @@ const handleChange=(e)=>{
 }
 const handleSubmit=(e)=>{
     e.preventDefault();
+    notify();
     fetch('http://localhost:9090/feedback/add', {
       method: 'POST',
       body: JSON.stringify(formData),
@@ -33,11 +34,11 @@ const handleSubmit=(e)=>{
     .then((data) => {
         console.log(data);
         // Handle data
-    })
+    }).then((data)=> notify())
     .catch((err) => {
         console.log(err.message);
     })
-    notify()
+    
 }
     return (
         <>

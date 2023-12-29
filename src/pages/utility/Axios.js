@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const EMPLOYEE_API_BASE_URL = 'http://localhost:9090/scholarship';
+const EMPLOYEE_API_BASE_URL = 'http://http://scholarship-env.eba-h5npp4q2.us-east-1.elasticbeanstalk.com/scholarship';
 
 class EmployeeService{
 
@@ -8,4 +8,3 @@ class EmployeeService{
         return axios.get(EMPLOYEE_API_BASE_URL);
     }
 }
-// export default EmployeeService;
