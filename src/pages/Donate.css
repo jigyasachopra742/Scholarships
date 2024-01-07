@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Kanit:wght@100;300&family=Montserrat:wght@200&family=Poppins:wght@300;500&family=Work+Sans:ital,wght@1,300&display=swap');
+
+.uppper_body{
+    background-color: #0f172a;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.center_{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    margin-top: 15%;
+    width: 50vw;
+}
+.center_right{
+    color: white;
+    flex-basis: 50%;
+    background-color: #0f172a;
+    border-bottom-left-radius: 9px;
+}
+.center_right h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 34px;
+    padding-left: 10px;
+}
+.center_right p{
+    font-family: 'Poppins', sans-serif;
+     font-style: italic;
+     font-size: 13px;
+     padding-left: 10px;
+}
+
+.center_right div button{
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.center_right button:hover{
+    background-color: green;
+    color: white;
+}
+.center_left{
+    flex-basis: 46%;
+    background-image: url('../assests/donate.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 15%;
+}
+
+.donate{
+    background-color: rgba(95, 213, 140, 1);
+    color: black;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 9px;
+    margin-top: 20px;
+}
+
+@media screen and (max-width : 900px) {
+    .center_left{
+        display: none;
+    } 
+    .center_right{
+        margin-top: 10%;
+    }
+}

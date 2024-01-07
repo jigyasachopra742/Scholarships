@@ -24,6 +24,10 @@ const Home = () => {
     navigate("/form");    
   };
 
+  const HandleClickDonate = () => {
+    navigate("/donate");    
+  };
+
   return (
     <>
     {/* HEADER PART */}
@@ -54,6 +58,8 @@ const Home = () => {
     
     {/* Registration button */}
     <button className="btn btn-1 btn-1c" onClick={HandleClick}>Registration</button>
+    {/* donate us */}
+    <button className="btn btn-1 btn-1c" onClick={HandleClickDonate}>Donation</button>
     
 
       {/* CATEGORY OF SCHOLARSHIP */}

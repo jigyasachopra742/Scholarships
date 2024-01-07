@@ -18,7 +18,7 @@ const Form = () => {
     
     notify();
     
-    fetch('http://localhost:9090/user/added', {
+    fetch('http://scholarship-env.eba-h5npp4q2.us-east-1.elasticbeanstalk.com/user/added', {
       method: 'POST',
       body: JSON.stringify(formData),
       headers: {

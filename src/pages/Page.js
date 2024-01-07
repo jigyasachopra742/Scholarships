@@ -9,6 +9,7 @@ import Allscholarships from './Allscholarships';
 import Form from './Form';
 import ContactUs from './ContactUs';
 import FeedBack from './FeedBack';
+import Donate from './Donate';
 
 const Page = () => {
   return (
@@ -16,6 +17,7 @@ const Page = () => {
       <div className='page'>
           <Routes>
               <Route path='/' element= {<Home />}></Route>
+              <Route path='/donate' element= {<Donate />}></Route>
               <Route path='about' element= {<About />}></Route>
               <Route path='contactus' element = {<ContactUs />}></Route>
               {/* <Route path='contact' element= {<Contact />}></Route> */}
