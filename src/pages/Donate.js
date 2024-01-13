@@ -4,22 +4,23 @@ export default function Donate(){
 
     async function makePayment(){
         console.log("=============================")
-        const data = await fetch('http://localhost:5000/payment?amount=500', {
+        const data = await fetch("http://scholarship-app-final-env.eba-kg3q4f2z.us-east-1.elasticbeanstalk.com/payment?amount=500", {
           method: 'POST',
           headers: {
             'Content-type': 'application/json; charset=UTF-8',
           },
         })
         const order = await data.json();
-        console.log(order);
-        console.log(process.env.REACT_APP_razorpay_key)
+        // console.log(order.orderId);
+        // console.log(process.env.REACT_APP_razorpay_key)
         const options = {
           key: process.env.REACT_APP_razorpay_key,
           name: "Client_name",
           currency: "INR",
           amount: 50*100, 
-          order_id: order.id,
+          order_id: order.orderId,
           handler: async function (response) {
+            console.log(response)
             alert(`Payment successful! Reference ID: ${response.razorpay_payment_id}`);
           },
           prefill: {
@@ -33,7 +34,8 @@ export default function Donate(){
         paymentObject.open();
     
         paymentObject.on("payment.failed", function (response) {
-          alert("Payment failed. Please try again. Contact support for help");
+          console.log(response)
+          // alert("Payment failed. Please try again. Contact support for help",response);
         });
       };
     

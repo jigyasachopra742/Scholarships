@@ -24,7 +24,7 @@ const handleChange=(e)=>{
 const handleSubmit=(e)=>{
     e.preventDefault();
     notify();
-    fetch('http://scholarship-env.eba-h5npp4q2.us-east-1.elasticbeanstalk.com/feedback/add', {
+    fetch("http://scholarship-app-final-env.eba-kg3q4f2z.us-east-1.elasticbeanstalk.com"+'/feedback/add', {
       method: 'POST',
       body: JSON.stringify(formData),
       headers: {

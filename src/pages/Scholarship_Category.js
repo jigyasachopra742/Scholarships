@@ -7,7 +7,7 @@ import "./Scholarship.css";
 const Scholarship_Category = ({ category }) => {
   const [scholarships, setScholarships] = useState([]);
   useEffect(() => {  
-    const apiUrl = `http://scholarship-env.eba-h5npp4q2.us-east-1.elasticbeanstalk.com/scholarship/${category}`;
+    const apiUrl = "http://scholarship-app-final-env.eba-kg3q4f2z.us-east-1.elasticbeanstalk.com"+`/scholarship/${category}`;
     fetch(apiUrl)
       .then(response => response.json())
       .then(data => {

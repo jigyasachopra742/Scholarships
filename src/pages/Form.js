@@ -18,7 +18,7 @@ const Form = () => {
     
     notify();
     
-    fetch('http://scholarship-env.eba-h5npp4q2.us-east-1.elasticbeanstalk.com/user/added', {
+    fetch("http://scholarship-app-final-env.eba-kg3q4f2z.us-east-1.elasticbeanstalk.com"+'/user/added', {
       method: 'POST',
       body: JSON.stringify(formData),
       headers: {
